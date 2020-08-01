@@ -40,6 +40,7 @@ func OpenFileAndFindNthString(filename string, nth int, expected string) bool {
 		// matching logic
 		ss := strings.Split(trimmed, " ")
 		if ss[nth] == expected {
+                        fmt.Println(kace.Camel(ss[nth]))
 			return true
 		}
 	}
