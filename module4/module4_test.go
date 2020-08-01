@@ -6,6 +6,8 @@ import (
 	"os"
 	"strings"
 	"testing"
+        "fmt"
+        "github.com/codemodus/kace"
 )
 
 func TestModule4GoFormatContent(t *testing.T) {
@@ -18,6 +20,7 @@ func TestModule4GoFormatContent(t *testing.T) {
 
 // OpenFileAndFindNthString opens a file, look for Nth string splitted by a space, and return if given expected string is found or not
 func OpenFileAndFindNthString(filename string, nth int, expected string) bool {
+        fmt.Println(kace.Camel("test"))
 	f, err := os.Open(filename)
 	if err != nil {
 		log.Fatal(err)
