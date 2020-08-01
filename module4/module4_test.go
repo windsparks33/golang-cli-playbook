@@ -6,6 +6,8 @@ import (
 	"os"
 	"strings"
 	"testing"
+        "fmt"
+        "github.com/codemodus/kace"
 )
 
 func TestModule4GoFormatContent(t *testing.T) {
@@ -37,6 +39,7 @@ func OpenFileAndFindNthString(filename string, nth int, expected string) bool {
 		// matching logic
 		ss := strings.Split(trimmed, " ")
 		if ss[nth] == expected {
+                        fmt.Println(kace.Camel(ss[nth]))
 			return true
 		}
 	}
